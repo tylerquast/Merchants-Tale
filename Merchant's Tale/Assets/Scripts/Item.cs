@@ -5,6 +5,6 @@ public class Item : ScriptableObject
 {
     new public string name = "default";
     public Sprite icon = null;
-    
+    public int index = -1;
 
 }
