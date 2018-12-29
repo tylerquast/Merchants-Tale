@@ -1,8 +1,9 @@
 ﻿
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class InventorySlot : MonoBehaviour
+public class InventorySlot : MonoBehaviour, IDropHandler
 {
     public Image icon;
     //public int index;
@@ -36,4 +37,29 @@ public class InventorySlot : MonoBehaviour
             icon.enabled = false;
         }
     }
-}
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        if (eventData != null && eventData.pointerDrag.GetComponent<ItemDragHandler>() != null)
+        {
+            Item droppedItem = Inventory.instance.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()];
+            if (eventData.pointerDrag.transform.parent.name == gameObject.name)
+            {
+                return;
+            }
+            if (Inventory.instance.items[transform.GetSiblingIndex()] == null)
+            {
+                Inventory.instance.items[transform.GetSiblingIndex()] = droppedItem;
+                Inventory.instance.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()] = null;
+                Inventory.instance.OnItemChangedCallback.Invoke();
+            }
+            else
+            {
+                Item tempItem = Inventory.instance.items[transform.GetSiblingIndex()];
+                Inventory.instance.items[transform.GetSiblingIndex()] = droppedItem;
+                Inventory.instance.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()] = tempItem;
+                Inventory.instance.OnItemChangedCallback.Invoke();
+            }
+        }
+    }
+ }
