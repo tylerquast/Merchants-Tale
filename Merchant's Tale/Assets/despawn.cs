@@ -1,21 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 
-public class despawn : MonoBehaviour {
-
-  public GameObject item;
-  void Update () {
+public class despawn : MonoBehaviour{
+  void Update() {
     if (Input.GetMouseButtonDown(0)) {
-      Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-      Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-
-      RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-      if (hit.collider != null) {
-        Debug.Log(item.name);
-        Debug.Log("Deleting");
-        Destroy(item);
-      }
+    Debug.Log("Pressed left click, casting ray.");
+    CastRay();
     }
   }
 
+  void CastRay() {
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    RaycastHit hit;
+    if (Physics.Raycast(ray, out hit, 100)) {
+      Debug.DrawLine(ray.origin, hit.point);
+    }
+  }
 }
