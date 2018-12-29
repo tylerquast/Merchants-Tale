@@ -95,7 +95,7 @@ GameObject:
   m_Layer: 5
   m_Name: inventorySlot
   m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: bb99c20ffd350874ba1cb4b21920d879, type: 3}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -333,7 +333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29a3d637d1bdd74bb61db8c7bbe57ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDragging: 0
 --- !u!1 &4246507766013353519
 GameObject:
   m_ObjectHideFlags: 0
