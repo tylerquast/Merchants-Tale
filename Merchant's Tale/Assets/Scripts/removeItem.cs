@@ -8,7 +8,7 @@ public class removeItem : MonoBehaviour
     public InventorySlot mySlot;
     public void removeItemFunction()
     {
-        inventory.remove(mySlot.index);
+        inventory.remove(mySlot.transform.GetSiblingIndex());
 
     }
 }

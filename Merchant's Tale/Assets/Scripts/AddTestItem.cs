@@ -11,7 +11,7 @@ public class AddTestItem : MonoBehaviour
     {
         Item banana = ScriptableObject.CreateInstance<Item>();
         banana.icon = item.icon;
-        banana.index = item.index;
+      //  banana.index = item.index;
         banana.name = item.name;
         inventory.add(banana);
 

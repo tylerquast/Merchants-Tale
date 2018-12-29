@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
         {
             if (items[i] == null)
             {
-                item.index = i;
+               // item.index = i;
                 items[i] = item;
                 if (OnItemChangedCallback != null)
                     OnItemChangedCallback.Invoke();
@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
         if (items.Count < space)
         {
 
-            item.index = items.Count;
+           // item.index = items.Count;
             items.Add(item);
             if (OnItemChangedCallback != null)
                 OnItemChangedCallback.Invoke();

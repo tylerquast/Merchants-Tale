@@ -130,7 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 4246507765125413717}
-  index: 0
 --- !u!1 &4246507765125413715
 GameObject:
   m_ObjectHideFlags: 0
