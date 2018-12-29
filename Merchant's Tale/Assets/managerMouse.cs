@@ -13,6 +13,7 @@ public class managerMouse : MonoBehaviour
         if (hit)
         {
             Destroy(hit.collider.gameObject);
+            gameManager.totalMoney = gameManager.totalMoney + 10;
         }
     }
 }

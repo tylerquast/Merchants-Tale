@@ -31,6 +31,7 @@ public class spawnItem : MonoBehaviour
   }
   IEnumerator successRender(float secToWait){
     Debug.Log("Start");
+    gameManager.totalItems = gameManager.totalItems + 1;
     success.SetActive(true);
     yield return new WaitForSeconds(secToWait);
     Debug.Log("end");
