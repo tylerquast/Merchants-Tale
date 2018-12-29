@@ -23,4 +23,17 @@ public class InventorySlot : MonoBehaviour
         icon.enabled = false;
       //  index = -1;
     }
+
+    public void UpdateSlot()
+    {
+        if (Inventory.instance.items[transform.GetSiblingIndex()] != null)
+        {
+            icon.sprite = Inventory.instance.items[transform.GetSiblingIndex()].icon;
+            icon.enabled = true;
+         }
+        else
+        {
+            icon.enabled = false;
+        }
+    }
 }
