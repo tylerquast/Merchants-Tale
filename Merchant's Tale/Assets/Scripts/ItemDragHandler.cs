@@ -12,7 +12,7 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
     {
         if (Inventory.instance.items[transform.parent.GetSiblingIndex()] != null)
         {
-            Debug.Log("begindrag");
+            //Debug.Log("begindrag");
             isDragging = true;
             originalParent = transform.parent;
             transform.SetParent(transform.parent.parent);

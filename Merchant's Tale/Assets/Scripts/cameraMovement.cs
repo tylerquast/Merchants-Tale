@@ -7,6 +7,8 @@ public class cameraMovement : MonoBehaviour {
     public Vector3 newPosition;
     public float newScale;
     private Camera newCam;
+    public float direcitonalSpeed = (float).01;
+    public float zoomSpeed = (float)1.0;
 	// Use this for initialization
 	void Start () {
         
@@ -20,28 +22,28 @@ public class cameraMovement : MonoBehaviour {
         if (Input.GetKey("a"))
         {
             //left
-            newPosition.x = newPosition.x - (float)1;
+            newPosition.x = newPosition.x - direcitonalSpeed;
         }
         if (Input.GetKey("d"))
         {
             //right
-            newPosition.x = newPosition.x + (float)1;
+            newPosition.x = newPosition.x + direcitonalSpeed;
 
         }
         if (Input.GetKey("w"))
         {
             //up
-            newPosition.y = newPosition.y + (float)1;
+            newPosition.y = newPosition.y + direcitonalSpeed;
 
         }
         if (Input.GetKey("s"))
         {
             //down
-            newPosition.y = newPosition.y - (float)1;
+            newPosition.y = newPosition.y - direcitonalSpeed;
 
         }
         //scroll
-        newScale = newScale - 100 * Input.GetAxis("Mouse ScrollWheel");
+        newScale = newScale - zoomSpeed * Input.GetAxis("Mouse ScrollWheel");
 
         transform.position = newPosition;
         newCam.orthographicSize = newScale;
