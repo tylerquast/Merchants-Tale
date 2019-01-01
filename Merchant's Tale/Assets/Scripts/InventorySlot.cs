@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
+    public Inventory parentInventory;
     public Image icon;
     //public int index;
     Item item;
@@ -27,9 +28,11 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
     public void UpdateSlot()
     {
-        if (Inventory.instance.items[transform.GetSiblingIndex()] != null)
+        Debug.Log("item update");
+        Debug.Log(parentInventory.items.Count);
+        if (parentInventory.items[transform.GetSiblingIndex()] != null)
         {
-            icon.sprite = Inventory.instance.items[transform.GetSiblingIndex()].icon;
+            icon.sprite = parentInventory.items[transform.GetSiblingIndex()].icon;
             icon.enabled = true;
          }
         else
@@ -42,23 +45,23 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     {
         if (eventData != null && eventData.pointerDrag.GetComponent<ItemDragHandler>() != null)
         {
-            Item droppedItem = Inventory.instance.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()];
+            Item droppedItem = parentInventory.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()];
             if (eventData.pointerDrag.transform.parent.name == gameObject.name)
             {
                 return;
             }
-            if (Inventory.instance.items[transform.GetSiblingIndex()] == null)
+            if (parentInventory.items[transform.GetSiblingIndex()] == null)
             {
-                Inventory.instance.items[transform.GetSiblingIndex()] = droppedItem;
-                Inventory.instance.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()] = null;
-                Inventory.instance.OnItemChangedCallback.Invoke();
+                parentInventory.items[transform.GetSiblingIndex()] = droppedItem;
+                parentInventory.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()] = null;
+                parentInventory.OnItemChangedCallback.Invoke();
             }
             else
             {
-                Item tempItem = Inventory.instance.items[transform.GetSiblingIndex()];
-                Inventory.instance.items[transform.GetSiblingIndex()] = droppedItem;
-                Inventory.instance.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()] = tempItem;
-                Inventory.instance.OnItemChangedCallback.Invoke();
+                Item tempItem = parentInventory.items[transform.GetSiblingIndex()];
+                parentInventory.items[transform.GetSiblingIndex()] = droppedItem;
+                parentInventory.items[eventData.pointerDrag.GetComponent<ItemDragHandler>().transform.parent.GetSiblingIndex()] = tempItem;
+                parentInventory.OnItemChangedCallback.Invoke();
             }
         }
     }

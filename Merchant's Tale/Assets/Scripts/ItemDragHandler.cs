@@ -6,11 +6,14 @@ using UnityEngine.EventSystems;
 public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     private Transform originalParent;
+    private InventorySlot mytest;
     public bool isDragging;
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (Inventory.instance.items[transform.parent.GetSiblingIndex()] != null)
+        mytest = transform.parent.GetComponent<InventorySlot>();
+
+        if (mytest.parentInventory.items[transform.parent.GetSiblingIndex()] != null)
         {
             //Debug.Log("begindrag");
             isDragging = true;
@@ -23,7 +26,7 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (Inventory.instance.items[originalParent.transform.GetSiblingIndex()] != null && eventData.button == PointerEventData.InputButton.Left)
+        if (mytest.parentInventory.items[originalParent.transform.GetSiblingIndex()] != null && eventData.button == PointerEventData.InputButton.Left)
         {
             transform.position = Input.mousePosition;
         }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class removeItem : MonoBehaviour
 {
-    public Inventory inventory = Inventory.instance;
     public InventorySlot mySlot;
     public void removeItemFunction()
     {
-        inventory.remove(mySlot.transform.GetSiblingIndex());
-
+       
+        InventorySlot mytest = transform.parent.GetComponent<InventorySlot>();
+        mytest.parentInventory.remove(mySlot.transform.GetSiblingIndex());
     }
 }

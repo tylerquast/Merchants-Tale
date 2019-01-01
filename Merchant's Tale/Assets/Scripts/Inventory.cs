@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public static Inventory instance;
-
-    private void Awake()
-    {
-        instance = this;
-    }
+    
 
     public int space = 20;
     public delegate void OnItemChanged();

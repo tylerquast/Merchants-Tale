@@ -1,15 +1,16 @@
-﻿
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryUI : MonoBehaviour
+public class StoreInventoryUI : MonoBehaviour
 {
     public Transform itemsContainer;
-    PlayerInventory inventory;
+    ShopInventory inventory;
     // Start is called before the first frame update
     InventorySlot[] slots;
     void Start()
     {
-       inventory = PlayerInventory.instance;
+        inventory = ShopInventory.instance;
         inventory.OnItemChangedCallback += UpdateUI;
         slots = itemsContainer.GetComponentsInChildren<InventorySlot>();
     }
@@ -32,6 +33,6 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

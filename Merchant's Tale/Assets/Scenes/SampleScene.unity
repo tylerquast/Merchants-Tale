@@ -239,7 +239,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &79315428 stripped
@@ -513,7 +513,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &97863034 stripped
@@ -977,7 +977,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &192878360 stripped
@@ -1464,7 +1464,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &387938031 stripped
@@ -1731,7 +1731,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &446419531 stripped
@@ -2323,7 +2323,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &569722795 stripped
@@ -3043,7 +3043,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &731689898 stripped
@@ -3179,7 +3179,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &753537105 stripped
@@ -3547,7 +3547,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &799896821 stripped
@@ -3677,7 +3677,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &801068172 stripped
@@ -3900,6 +3900,7 @@ GameObject:
   - component: {fileID: 894115920}
   - component: {fileID: 894115919}
   - component: {fileID: 894115918}
+  - component: {fileID: 894115922}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3987,6 +3988,19 @@ RectTransform:
   m_AnchoredPosition: {x: -3.466, y: -1.773}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &894115922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894115917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cdb5e8ae60b59478a680b8819810d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsContainer: {fileID: 115785388}
 --- !u!224 &897587339 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4246507764491323991, guid: de729adec6fa912459ab3751309edc3e,
@@ -4319,7 +4333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772a79ec04ab3874ea58d2a82c251812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 1091472507}
+  inventory: {fileID: 0}
   item: {fileID: 11400000, guid: 7b4782fc2e822a049903bdea99d06204, type: 2}
 --- !u!114 &1071022978
 MonoBehaviour:
@@ -4538,7 +4552,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &1083502770 stripped
@@ -4574,7 +4588,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1091472506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2880e4fabf53f246a138387de06d013, type: 3}
+  m_Script: {fileID: 11500000, guid: 66e658be22bdb96458d3a9e2a95239f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   space: 20
@@ -4909,7 +4923,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &1130106427 stripped
@@ -5608,7 +5622,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &1373227687 stripped
@@ -6113,7 +6127,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &1608082249 stripped
@@ -9221,7 +9235,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &1642255205 stripped
@@ -9482,7 +9496,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &1754723835 stripped
@@ -9612,7 +9626,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &1780090526 stripped
@@ -10594,7 +10608,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &2053049177 stripped
@@ -10799,7 +10813,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &2066666803 stripped
@@ -11290,7 +11304,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 1091472507}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7753628015e2d314fbeb5dcb73ce0c42, type: 3}
 --- !u!224 &2138685641 stripped

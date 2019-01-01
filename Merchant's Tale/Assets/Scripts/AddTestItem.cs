@@ -5,7 +5,7 @@ using UnityEngine;
 public class AddTestItem : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Inventory inventory = Inventory.instance;
+    public Inventory inventory;
     public Item item;
     public void addTestItemFuction()
     {

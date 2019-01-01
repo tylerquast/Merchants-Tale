@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopInventory : Inventory
+public class PlayerInventory : Inventory
 {
-    public static ShopInventory instance;
+    public static PlayerInventory instance;
 
     private void Awake()
     {
-        instance = this;
+         instance = this;
     }
     
 }
