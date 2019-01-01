@@ -15,7 +15,7 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
 
         if (mytest.parentInventory.items[transform.parent.GetSiblingIndex()] != null)
         {
-            //Debug.Log("begindrag");
+            Debug.Log("begindrag");
             isDragging = true;
             originalParent = transform.parent;
             transform.SetParent(transform.parent.parent);
@@ -26,8 +26,10 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
 
     public void OnDrag(PointerEventData eventData)
     {
+
         if (mytest.parentInventory.items[originalParent.transform.GetSiblingIndex()] != null && eventData.button == PointerEventData.InputButton.Left)
         {
+             Debug.Log("Ondrag");
             transform.position = Input.mousePosition;
         }
     }
@@ -37,6 +39,7 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
     {
         if (eventData.button == PointerEventData.InputButton.Left && isDragging)
         {
+            Debug.Log("OnpointerUp");
             isDragging = false;
             transform.SetParent(originalParent);
             transform.localPosition = Vector3.zero;
